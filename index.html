@@ -1,13 +1,52 @@
-<!DOCTYPE html>
-<!-- saved from url=(0038)http://gabrielecirulli.github.io/2048/ -->
-
 <html lang="en" manifest="cache.appcache"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <title>2048</title>
-
+  <link rel="shortcut icon" href="./bs/pic.ico">
   <link href="./2048_files/main.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./bs/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./bs/css/bootstrap.min.css">
+  <script type="text/javascript" src="./bs/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+        $("[rel='tooltip']").tooltip();
+    });
+</script>
+
 
 <body data-twttr-rendered="true">
+
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="./index.html" class="navbar-brand">Varun</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="projs">Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a href="http://a-varun.github.io/brain_fcuk/index.html">Brain Fcuk</a></li>
+                <li class="divider"></li>
+                <li class="active"><a href="http://a-varun.github.io/2048_2pl/index.html">2048 Clone</a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+
+
+<br><br><br>
+
+
   <div class="container">
     <div class="heading">
       <h1 class="title">2048</h1>
@@ -17,9 +56,39 @@
       </div>
     </div>
 
+
     <div class="above-game">
       <p class="game-intro">Play the famous <strong>2048 </strong>game, against the computer</p>
+      &nbsp;&nbsp;
+      <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">
+  View the rules
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Rules</h4>
+      </div>
+      <div class="modal-body">
+      It is very simple to play this game. Press the four arrow keys, and save yourself from loosing.
+      The computer plays after you.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div></div>
       <a class="restart-button">New Game</a>
+    
+      <br><br>
+      <div class="alert alert-warning alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <strong>Warning!</strong> Contains a lot of bugs. The tile transitions may not be fluid. Please ignore that. And better, please help me figure out a way to make it smooth.
+</div>
     </div>
 
     <div class="game-container">
@@ -62,7 +131,10 @@
         </div>
       </div>
 
-      <div class="tile-container"><div class="tile tile-2 tile-position-2-1 tile-new"><div class="tile-inner">2</div></div><div class="tile tile-2 tile-position-3-1 tile-new"><div class="tile-inner">2</div></div></div>
+
+      <div class="tile-container"><div class="tile tile-2 tile-position-2-1 tile-new"><div class="tile-inner">2</div></div><div class="tile tile-2 tile-position-3-1 tile-new">
+
+      <div class="tile-inner">2</div></div></div>
     </div>
 
     <p class="game-explanation">
@@ -74,6 +146,8 @@
     Created by <a href="http://a-varun.github.io/" target="_blank">Varun</a>, based on the game by <a href="http://gabrielecirulli.com/" target="_blank">Gabriele Cirulli.</a>
     </p>
   </div>
+
+
 
   <script src="./2048_files/bind_polyfill.js"></script>
   <script src="./2048_files/classlist_polyfill.js"></script>

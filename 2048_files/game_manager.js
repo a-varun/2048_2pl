@@ -1,4 +1,5 @@
 var bpo = 0;
+var flag = false;
 function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
@@ -41,6 +42,7 @@ GameManager.prototype.isGameTerminated = function () {
 GameManager.prototype.move = function (direction) {
   // 0: up, 1: right, 2: down, 3: left
   var self = this;
+  if(bpo % 2 == 1 && !flag) return;
   bpo = bpo + 1; 
   varitup+=1;
   if (this.isGameTerminated()) return; // Don't do anything if the game's over
@@ -99,6 +101,9 @@ GameManager.prototype.move = function (direction) {
     }
 
     this.actuate();
+  }
+  else{
+    bpo--;
   }
 
   function dofunc(){
@@ -383,6 +388,7 @@ this.aredifferent = function(a,b){
 }
 
 this.dofunc=  function (){
+  //for(var i=0;i<1000;i++)for(var j=0;j<10000;j++);
     var arr = self.getarr();
     var max = 1<<49, move = 0;
     for(var i=0;i<4;i++){
@@ -412,9 +418,10 @@ this.printarray = function(arr){
       }
 
     }
+
+    setInterval(function(){
   if(bpo%2==1){
-    
-      
+        flag = true;    
         myMove = self.dofunc();
         var arr = self.getarr();
         var brr = self.moveitout(arr,myMove);
@@ -430,7 +437,7 @@ this.printarray = function(arr){
         }
     
     }
-
+},100);
 
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
