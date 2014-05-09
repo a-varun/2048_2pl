@@ -1,1 +1,98 @@
-hihello
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://gabrielecirulli.github.io/2048/ -->
+<html lang="en" manifest="cache.appcache"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>2048</title>
+
+  <link href="./2048_files/main.css" rel="stylesheet" type="text/css">
+
+<body data-twttr-rendered="true">
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">340</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Play the famous <strong>2048 </strong>game, against the computer</p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+          <div class="score-sharing"></div>
+          <div class="mailing-list">
+            <!-- MailChimp Signup Form -->
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container"><div class="tile tile-2 tile-position-2-1 tile-new"><div class="tile-inner">2</div></div><div class="tile tile-2 tile-position-3-1 tile-new"><div class="tile-inner">2</div></div></div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one! The computer tries to end the game soon, so be careful</strong>
+    </p>
+    <hr>
+    <hr>
+    <p>
+    Created by <a href="http://a-varun.github.io/" target="_blank">Varun</a>, based on the game by<a href="http://gabrielecirulli.com/" target="_blank">Gabriele Cirulli.</a>
+    </p>
+  </div>
+
+  <script src="./2048_files/bind_polyfill.js"></script>
+  <script src="./2048_files/classlist_polyfill.js"></script>
+  <script src="./2048_files/animframe_polyfill.js"></script>
+  <script src="./2048_files/keyboard_input_manager.js"></script>
+  <script src="./2048_files/html_actuator.js"></script>
+  <script src="./2048_files/grid.js"></script>
+  <script src="./2048_files/tile.js"></script>
+  <script src="./2048_files/local_storage_manager.js"></script>
+  <script src="./2048_files/game_manager.js"></script>
+  <script src="./2048_files/application.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+    ga("create", "UA-42620757-2", "gabrielecirulli.github.io");
+    ga("send", "pageview");
+  </script>
+
+</body></html>
