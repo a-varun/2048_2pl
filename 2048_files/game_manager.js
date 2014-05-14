@@ -414,7 +414,7 @@ this.printarray = function(arr){
       var stri="";
       for(var j=0;j<4;j++){
         stri+=arr[i][j]+' ';}
-        console.log(stri+'\n');
+        
       }
 
     }
@@ -432,7 +432,7 @@ this.printarray = function(arr){
                   var arr = self.getarr();
         var brr = self.moveitout(arr,i);
         if(self.aredifferent(arr,brr)){
-          self.move(myMove);break;}
+          self.move(i);break;}
           }
         }
     
