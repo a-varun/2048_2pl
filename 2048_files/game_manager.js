@@ -1,4 +1,5 @@
 var bpo = 0;
+var flag = false;
 function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
@@ -412,8 +413,7 @@ this.printarray = function(arr){
   for(var i=0;i<4;i++){
       var stri="";
       for(var j=0;j<4;j++){
-        stri+=arr[i][j]+' ';
-        }
+        stri+=arr[i][j]+' ';}
         console.log(stri+'\n');
       }
 
@@ -432,7 +432,7 @@ this.printarray = function(arr){
                   var arr = self.getarr();
         var brr = self.moveitout(arr,i);
         if(self.aredifferent(arr,brr)){
-          self.move(i);break;}
+          self.move(myMove);break;}
           }
         }
     
