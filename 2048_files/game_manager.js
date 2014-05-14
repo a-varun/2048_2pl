@@ -1,5 +1,4 @@
 var bpo = 0;
-var flag = false;
 function GameManager(size, InputManager, Actuator, StorageManager) {
   this.size           = size; // Size of the grid
   this.inputManager   = new InputManager;
