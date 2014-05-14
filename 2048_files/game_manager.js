@@ -412,9 +412,9 @@ this.printarray = function(arr){
   for(var i=0;i<4;i++){
       var stri="";
       for(var j=0;j<4;j++){
-        //stri+=arr[i][j]+' ';
+        stri+=arr[i][j]+' ';
         }
-        //console.log(stri+'\n');
+        console.log(stri+'\n');
       }
 
     }
